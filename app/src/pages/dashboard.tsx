@@ -2,12 +2,16 @@ import React from 'react';
 import { Grid, Typography } from '@mui/material';
 import DashSummaryCard from '../components/DashSummaryCard';
 import * as AccountUtils from '../utils/accountUtils';
+import * as TransactionUtils from '../utils/transactionUtils'
 import { useAccounts } from '../hooks/useAccounts'
+import { useTransactions } from '../hooks/useTransactions';
 
 const Dashboard: React.FC = () => {
 
-    const { accounts, error } = useAccounts();
+    const { accounts } = useAccounts();
+    const { transactions } = useTransactions();
     const balance = AccountUtils.calculateTotalBalance(accounts);
+    const profitLoss = TransactionUtils.calculateProfitLoss(transactions);
 
     return (
         <Grid container spacing={3} sx={{ p: 5 }}>
@@ -23,7 +27,7 @@ const Dashboard: React.FC = () => {
                 <DashSummaryCard title="Expenses" color="blue" />
             </Grid>
             <Grid item xs={3}>
-                <DashSummaryCard title="Profit/Loss" color="red" />
+                <DashSummaryCard title="Profit/Loss" color="red" value={profitLoss} />
             </Grid>
             <Grid item xs={3}>
                 <DashSummaryCard title="Balance" color="green" value={balance} />
