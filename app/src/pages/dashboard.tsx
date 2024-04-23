@@ -18,7 +18,7 @@ const Dashboard: React.FC = () => {
     return (
         <Grid container spacing={3} sx={{ p: 5 }}>
             <Grid item xs={12}>
-                <Typography variant="h2" sx={{ color: "white" }}>
+                <Typography variant="h3" sx={{ color: "white" }}>
                     Dashboard
                 </Typography>
             </Grid>
