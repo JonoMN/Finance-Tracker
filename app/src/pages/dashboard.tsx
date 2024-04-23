@@ -12,6 +12,8 @@ const Dashboard: React.FC = () => {
     const { transactions } = useTransactions();
     const balance = AccountUtils.calculateTotalBalance(accounts);
     const profitLoss = TransactionUtils.calculateProfitLoss(transactions);
+    const income = TransactionUtils.calculateIncome(transactions);
+    const expenses = TransactionUtils.calculateExpenses(transactions);
 
     return (
         <Grid container spacing={3} sx={{ p: 5 }}>
@@ -21,10 +23,10 @@ const Dashboard: React.FC = () => {
                 </Typography>
             </Grid>
             <Grid item xs={3}>
-                <DashSummaryCard title="Income" color="yellow" />
+                <DashSummaryCard title="Income" color="yellow" value={income} />
             </Grid>
             <Grid item xs={3}>
-                <DashSummaryCard title="Expenses" color="blue" />
+                <DashSummaryCard title="Expenses" color="blue" value={expenses} />
             </Grid>
             <Grid item xs={3}>
                 <DashSummaryCard title="Profit/Loss" color="red" value={profitLoss} />
