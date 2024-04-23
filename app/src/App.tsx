@@ -1,6 +1,7 @@
 import './App.css';
 import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from '@mui/material/styles';
+import { Box } from '@mui/material';
 
 import NavSidebar from "./components/NavSidebar";
 import customTheme from './themes/customTheme';
@@ -13,11 +14,13 @@ function App() {
     <ThemeProvider theme={customTheme}>
       <div className="App">
         <NavSidebar />
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/accounts" element={<Accounts />} />
-          <Route path="/transactions" element={<Transactions />} />
-        </Routes>
+        <Box sx={{ pl: "300px" }}>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/accounts" element={<Accounts />} />
+            <Route path="/transactions" element={<Transactions />} />
+          </Routes>
+        </Box>
       </div>
     </ThemeProvider>
   );
