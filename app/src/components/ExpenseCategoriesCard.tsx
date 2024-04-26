@@ -2,7 +2,7 @@ import { Paper, Typography, Box, Grid } from '@mui/material';
 import { PieChart, Pie, Sector, Cell, Legend, Tooltip } from 'recharts';
 import { useTransactions } from '../hooks/useTransactions';
 
-const cardColor = { background: 'linear-gradient(25deg, rgba(47, 47, 47, 0.1) 0%, rgba(47, 47, 47, 0.1) 30%, rgb(47, 84, 84) 150%)' };
+const cardColor = { background: 'linear-gradient(350deg, rgba(47, 84, 84, 0.1) 0%, rgba(47, 84, 84, 0.3) 50%, rgb(47, 84, 84) 150%)' };
 
 const COLORS = ['#FFEF6B', '#3EA8F4', '#E66F5C', '#FF89B3', '#2F5454'];
 
@@ -38,7 +38,7 @@ export default function ExpenseCategoriesCard() {
     console.log(result);
 
     return (
-        <Paper elevation={0} sx={{ p: 3, borderRadius: "20px", height: "250px", ...cardColor }}>
+        <Paper elevation={1} sx={{ p: 3, borderRadius: "20px", height: "250px", ...cardColor }}>
             <Grid container spacing={0} sx={{ p: 2 }} alignItems="center">
                 <Grid item xs={12}>
                     <Typography variant="h5" sx={{ color: "white" }}>

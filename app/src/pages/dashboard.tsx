@@ -18,23 +18,23 @@ const Dashboard: React.FC = () => {
     const expenses = TransactionUtils.calculateExpenses(transactions);
 
     return (
-        <Grid container spacing={3} sx={{ p: 5 }}>
+        <Grid container spacing={2} sx={{ p: 5 }}>
             <Grid item xs={12}>
                 <Typography variant="h3" sx={{ color: "white" }}>
                     Dashboard
                 </Typography>
             </Grid>
             <Grid item xs={3}>
-                <DashSummaryCard title="Income" subTitle="Past 30 days" color="yellow" value={income} />
+                <DashSummaryCard emoji={"💸"} title="Income" subTitle="Past 30 days" color="yellow" value={income} />
             </Grid>
             <Grid item xs={3}>
-                <DashSummaryCard title="Expenses" subTitle="Past 30 days" color="blue" value={expenses} />
+                <DashSummaryCard emoji={"🧾"} title="Expenses" subTitle="Past 30 days" color="blue" value={expenses} />
             </Grid>
             <Grid item xs={3}>
-                <DashSummaryCard title="Profit/Loss" subTitle="Past 30 days" color="red" value={profitLoss} />
+                <DashSummaryCard emoji={"📈"} title="Profit / Loss" subTitle="Past 30 days" color="red" value={profitLoss} />
             </Grid>
             <Grid item xs={3}>
-                <DashSummaryCard title="Balance" subTitle="Total" color="green" value={balance} />
+                <DashSummaryCard emoji={"💰"} title="Balance" subTitle="Total" color="green" value={balance} />
             </Grid>
 
             <Grid item xs={6}>
@@ -43,9 +43,9 @@ const Dashboard: React.FC = () => {
             <Grid item xs={6}>
                 <TodaysTransactionsCard />
             </Grid>
-            <Grid item xs={12}>
+            {/* <Grid item xs={12}>
                 <ExpenseCategoriesCard />
-            </Grid>
+            </Grid> */}
         </Grid>
     );
 };

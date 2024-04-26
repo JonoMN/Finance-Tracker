@@ -6,7 +6,7 @@ const Transactions = () => {
     const { transactions } = useTransactions();
 
     return (
-        <Grid container spacing={2} sx={{ p: 5 }}>
+        <Grid container spacing={3} sx={{ p: 5 }}>
             <Grid item xs={12}>
                 <Typography variant="h3" sx={{ color: "white" }}>
                     Transactions

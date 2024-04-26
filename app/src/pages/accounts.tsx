@@ -21,7 +21,7 @@ const Accounts = () => {
                 colorIndex = colorIndex < 4 ? colorIndex + 1 : 0;
                 return (
                     <Grid item xs={12} key={account.id}>
-                        <AccountCard accountName={account.attributes.displayName} colorIndex={colorIndex} value={parseFloat(account.attributes.balance.value)} />
+                        <AccountCard accountName={account.attributes.displayName} colorIndex={colorIndex} value={parseFloat(account.attributes.balance.value)} type={account.attributes.accountType} />
                     </Grid>
                 )
             })}

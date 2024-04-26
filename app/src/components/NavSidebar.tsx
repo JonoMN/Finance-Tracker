@@ -16,7 +16,7 @@ export default function NavBar() {
     const isActive = (path: string) => currentPath === path;
 
     const activeStyle = {
-        background: 'linear-gradient(25deg, rgba(47, 47, 47, 0.1) 0%, rgba(47, 47, 47, 0.1) 30%, rgb(255, 121, 99) 150%)'
+        background: 'linear-gradient(350deg, rgba(255, 121, 99, 0.1) 0%, rgba(255, 121, 99, 0.3) 50%, rgb(255, 121, 99) 100%)'
     };
 
     return (

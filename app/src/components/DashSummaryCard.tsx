@@ -7,30 +7,33 @@ type Props = {
     subTitle: string;
     color: string;
     value?: number;
+    emoji: string;
 }
 
 const colorStyles: { [key: string]: { background: string } } = {
-    yellow: { background: 'linear-gradient(25deg, rgba(47, 47, 47, 0.1) 0%, rgba(47, 47, 47, 0.1) 30%, rgb(255, 239, 107) 150%)' },
-    blue: { background: 'linear-gradient(25deg, rgba(47, 47, 47, 0.1) 0%, rgba(47, 47, 47, 0.1) 30%, rgb(62, 168, 244) 150%)' },
-    red: { background: 'linear-gradient(25deg, rgba(47, 47, 47, 0.1) 0%, rgba(47, 47, 47, 0.1) 30%, rgb(230, 111, 92) 150%)' },
-    green: { background: 'linear-gradient(25deg, rgba(47, 47, 47, 0.1) 0%, rgba(47, 47, 47, 0.1) 30%, rgb(47, 84, 84) 150%)' },
-    default: { background: 'linear-gradient(25deg, rgba(47, 47, 47, 0.1) 0%, rgba(47, 47, 47, 0.1) 30%, rgb(255, 239, 107) 150%)' }
+    yellow: { background: 'linear-gradient(350deg, rgba(255, 239, 107, 0.1) 0%, rgba(255, 239, 107, 0.3) 50%, rgb(255, 239, 107) 100%)' },
+    blue: { background: 'linear-gradient(350deg, rgba(62, 168, 244, 0.1) 0%, rgba(62, 168, 244, 0.3) 50%, rgb(62, 168, 244) 100%)' },
+    red: { background: 'linear-gradient(350deg, rgba(230, 111, 92, 0.1) 0%, rgba(230, 111, 92, 0.3) 50%, rgb(230, 111, 92) 100%)' },
+    green: { background: 'linear-gradient(350deg, rgba(47, 84, 84, 0.1) 0%, rgba(47, 84, 84, 0.3) 50%, rgb(47, 84, 84) 100%)' },
+    default: { background: 'linear-gradient(350deg, rgba(255, 239, 107, 0.1) 0%, rgba(255, 239, 107, 0.3) 50%, rgb(255, 239, 107) 100%)' }
 };
 
 const cardColor = (color: string) => colorStyles[color] || colorStyles.default;
 
 export default function DashSummaryCard(props: Props) {
     return (
-        <Paper elevation={0} sx={{ p: 3, borderRadius: "20px", ...cardColor(props.color) }}>
-            <AttachMoneyOutlinedIcon sx={{ color: "white", width: "40px", height: "40px" }} />
+        <Paper elevation={1} sx={{ p: 3, borderRadius: "20px", ...cardColor(props.color) }}>
+            <Typography variant='h3'>
+                {props.emoji}
+            </Typography>
             <Box sx={{ pt: 5 }}>
-                <Typography variant="subtitle1" sx={{ color: "white", opacity: 0.4 }}>
+                <Typography variant="subtitle1" sx={{ color: "white", opacity: 0.5 }}>
                     {props.subTitle}
                 </Typography>
-                <Typography variant="h6" sx={{ color: "white" }}>
+                <Typography variant="h5" sx={{ color: "white" }}>
                     {props.title}
                 </Typography>
-                <Typography variant="h6" sx={{ color: "white" }}>
+                <Typography variant="h5" sx={{ color: "white" }}>
                     $ {props.value}
                 </Typography>
             </Box>

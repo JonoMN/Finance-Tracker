@@ -16,6 +16,13 @@ const customTheme = createTheme({
             },
         },
     },
+    typography: {
+        fontFamily: [
+            'Roboto',
+            'Arial',
+            'sans-serif'
+        ].join(','),
+    },
 });
 
 export default customTheme;

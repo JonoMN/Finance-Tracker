@@ -3,7 +3,7 @@ import dayjs from 'dayjs';
 import { useTransactions } from '../hooks/useTransactions';
 import { Transaction } from '../types';
 
-const cardColor = { background: 'linear-gradient(350deg, rgba(47, 47, 47, 0.1) 0%, rgba(47, 47, 47, 0.1) 30%, rgb(255, 137, 179) 150%)' };
+const cardColor = { background: 'linear-gradient(350deg, rgba(255, 137, 179, 0.1) 0%, rgba(255, 137, 179, 0.3) 50%, rgb(255, 137, 179) 150%)' };
 
 
 export default function TodaysTransactionsCard() {
@@ -12,7 +12,7 @@ export default function TodaysTransactionsCard() {
     const todaysTransactions = transactions.filter((transaction) => dayjs().isSame(dayjs(transaction.attributes.createdAt), 'day')).slice(0, 4);
 
     return (
-        <Paper elevation={0} sx={{ p: 3, borderRadius: "20px", height: "250px", ...cardColor }}>
+        <Paper elevation={1} sx={{ p: 3, borderRadius: "20px", height: "250px", ...cardColor }}>
             <Grid container spacing={0} sx={{ p: 2 }} alignItems="center">
                 <Grid item xs={12}>
                     <Typography variant="h5" sx={{ color: "white" }}>
@@ -20,14 +20,14 @@ export default function TodaysTransactionsCard() {
                     </Typography>
                 </Grid>
                 {todaysTransactions.length === 0 ?
-                    <Typography variant="subtitle1" sx={{ color: "white", opacity: 0.4 }}>
+                    <Typography variant="subtitle1" sx={{ color: "white", opacity: 0.5 }}>
                         No transactions today.
                     </Typography >
                     : todaysTransactions.map((transaction) => {
                         return (
                             <Grid container xs={12} sx={{ p: 2 }} alignItems="center">
                                 <Grid item xs={2}>
-                                    <Typography variant="subtitle1" sx={{ color: "white", opacity: 0.4 }}>
+                                    <Typography variant="subtitle1" sx={{ color: "white", opacity: 0.5 }}>
                                         {dayjs(transaction.attributes.createdAt).format('h:mm A')}
                                     </Typography>
                                 </Grid>
