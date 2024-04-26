@@ -4,6 +4,7 @@ import AttachMoneyOutlinedIcon from '@mui/icons-material/AttachMoneyOutlined';
 
 type Props = {
     title: string;
+    subTitle: string;
     color: string;
     value?: number;
 }
@@ -24,9 +25,12 @@ export default function DashSummaryCard(props: Props) {
             <AttachMoneyOutlinedIcon sx={{ color: "white", width: "40px", height: "40px" }} />
             <Box sx={{ pt: 5 }}>
                 <Typography variant="subtitle1" sx={{ color: "white", opacity: 0.4 }}>
+                    {props.subTitle}
+                </Typography>
+                <Typography variant="h6" sx={{ color: "white" }}>
                     {props.title}
                 </Typography>
-                <Typography variant="subtitle1" sx={{ color: "white" }}>
+                <Typography variant="h6" sx={{ color: "white" }}>
                     $ {props.value}
                 </Typography>
             </Box>

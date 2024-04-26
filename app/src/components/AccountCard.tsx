@@ -18,7 +18,7 @@ const cardColor = (colorIndex: number) => colorStyles[colorIndex] || colorStyles
 
 export default function DashSummaryCard(props: Props) {
     return (
-        <Paper elevation={0} sx={{ p: 2, borderRadius: "20px", ...cardColor(props.colorIndex) }}>
+        <Paper elevation={1} sx={{ p: 2, borderRadius: "20px", ...cardColor(props.colorIndex) }}>
             <Grid container justifyContent="space-between" alignItems="center">
                 <Grid item sx={{ pl: 4 }}>
                     <Typography variant="h5" sx={{ color: "white" }}>
