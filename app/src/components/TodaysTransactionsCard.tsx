@@ -12,7 +12,7 @@ export default function TodaysTransactionsCard() {
     const todaysTransactions = transactions.filter((transaction) => dayjs().isSame(dayjs(transaction.attributes.createdAt), 'day')).slice(0, 4);
 
     return (
-        <Paper elevation={0} sx={{ p: 3, borderRadius: "20px", ...cardColor }}>
+        <Paper elevation={0} sx={{ p: 3, borderRadius: "20px", height: "250px", ...cardColor }}>
             <Grid container spacing={0} sx={{ p: 2 }} alignItems="center">
                 <Grid item xs={12}>
                     <Typography variant="h5" sx={{ color: "white" }}>
