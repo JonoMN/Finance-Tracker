@@ -1,4 +1,4 @@
-import { Paper, Typography, Box, Grid } from '@mui/material';
+import { Paper, Typography, Grid } from '@mui/material';
 
 type Props = {
     accountName: string;

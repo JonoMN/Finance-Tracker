@@ -1,7 +1,5 @@
 import { Paper, Typography, Box } from '@mui/material';
 
-import AttachMoneyOutlinedIcon from '@mui/icons-material/AttachMoneyOutlined';
-
 type Props = {
     title: string;
     subTitle: string;

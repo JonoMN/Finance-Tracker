@@ -2,7 +2,7 @@ import { Grid, Typography } from '@mui/material';
 import TransactionBlock from '../components/TransactionCard';
 import { useTransactions } from '../hooks/useTransactions';
 
-const Transactions = () => {
+const Transactions: React.FC = () => {
     const { transactions } = useTransactions();
 
     return (

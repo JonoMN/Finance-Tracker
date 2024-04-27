@@ -1,12 +1,8 @@
-import React from 'react';
 import { Grid, Typography } from '@mui/material';
 import AccountCard from '../components/AccountCard';
-import * as AccountUtils from '../utils/accountUtils';
-import * as TransactionUtils from '../utils/transactionUtils'
 import { useAccounts } from '../hooks/useAccounts'
-import { useTransactions } from '../hooks/useTransactions';
 
-const Accounts = () => {
+const Accounts: React.FC = () => {
     const { accounts } = useAccounts();
     let colorIndex = 0;
 

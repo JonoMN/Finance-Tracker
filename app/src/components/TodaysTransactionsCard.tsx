@@ -1,10 +1,8 @@
 import { Paper, Typography, Box, Grid } from '@mui/material';
 import dayjs from 'dayjs';
 import { useTransactions } from '../hooks/useTransactions';
-import { Transaction } from '../types';
 
 const cardColor = { background: 'linear-gradient(350deg, rgba(255, 137, 179, 0.1) 0%, rgba(255, 137, 179, 0.3) 50%, rgb(255, 137, 179) 150%)' };
-
 
 export default function TodaysTransactionsCard() {
 
