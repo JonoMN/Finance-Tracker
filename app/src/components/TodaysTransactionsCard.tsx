@@ -9,7 +9,7 @@ const cardColor = { background: 'linear-gradient(350deg, rgba(255, 137, 179, 0.1
 export default function TodaysTransactionsCard() {
 
     const { transactions } = useTransactions();
-    const todaysTransactions = transactions.filter((transaction) => dayjs().isSame(dayjs(transaction.attributes.createdAt), 'day')).slice(0, 4);
+    const todaysTransactions = transactions.filter((transaction) => dayjs().isSame(dayjs(transaction.attributes.createdAt), 'day')).slice(0, 5);
 
     return (
         <Paper elevation={1} sx={{ p: 3, borderRadius: "20px", height: "250px", ...cardColor }}>
@@ -25,7 +25,7 @@ export default function TodaysTransactionsCard() {
                     </Typography >
                     : todaysTransactions.map((transaction) => {
                         return (
-                            <Grid container xs={12} sx={{ p: 2 }} alignItems="center">
+                            <Grid container xs={12} sx={{ pt: 1 }} alignItems="center">
                                 <Grid item xs={2}>
                                     <Typography variant="subtitle1" sx={{ color: "white", opacity: 0.5 }}>
                                         {dayjs(transaction.attributes.createdAt).format('h:mm A')}

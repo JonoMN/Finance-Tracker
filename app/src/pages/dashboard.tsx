@@ -7,6 +7,7 @@ import * as AccountUtils from '../utils/accountUtils';
 import * as TransactionUtils from '../utils/transactionUtils'
 import { useAccounts } from '../hooks/useAccounts'
 import { useTransactions } from '../hooks/useTransactions';
+import MonthlyComparisonCard from '../components/MonthlyComparisonCard';
 
 const Dashboard: React.FC = () => {
 
@@ -43,9 +44,9 @@ const Dashboard: React.FC = () => {
             <Grid item xs={6}>
                 <TodaysTransactionsCard />
             </Grid>
-            {/* <Grid item xs={12}>
-                <ExpenseCategoriesCard />
-            </Grid> */}
+            <Grid item xs={12}>
+                <MonthlyComparisonCard />
+            </Grid>
         </Grid>
     );
 };
