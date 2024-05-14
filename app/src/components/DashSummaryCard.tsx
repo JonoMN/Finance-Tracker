@@ -32,7 +32,7 @@ export default function DashSummaryCard(props: Props) {
                     {props.title}
                 </Typography>
                 <Typography variant="h5" sx={{ color: "white" }}>
-                    $ {props.value}
+                    $ {props.value?.toFixed(2)}
                 </Typography>
             </Box>
         </Paper >
