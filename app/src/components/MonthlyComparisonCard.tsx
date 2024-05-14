@@ -51,7 +51,6 @@ export default function MonthlyComparisonCard() {
         });
     }
 
-    console.log(result);
     return (
         <Paper elevation={1} sx={{ p: 3, borderRadius: "20px", ...cardColor }}>
             <Grid container spacing={0} sx={{ p: 2 }} alignItems="center">
@@ -65,7 +64,7 @@ export default function MonthlyComparisonCard() {
                 </Grid>
                 <Grid item xs={12}>
                     <LineChart
-                        width={1400}
+                        width={1200}
                         height={200}
                         data={result}
                         margin={{
@@ -78,8 +77,8 @@ export default function MonthlyComparisonCard() {
                         <XAxis dataKey="name" />
                         <Tooltip />
                         <Legend />
-                        <Line type="monotone" dataKey="lastMonth" stroke="#8884d8" />
-                        <Line type="monotone" dataKey="thisMonth" stroke="#82ca9d" activeDot={{ r: 8 }} />
+                        <Line type="monotone" dataKey="lastMonth" stroke="#E66F5C" />
+                        <Line type="monotone" dataKey="thisMonth" stroke="#FFEF6B" activeDot={{ r: 8 }} />
                     </LineChart>
                 </Grid>
             </Grid>

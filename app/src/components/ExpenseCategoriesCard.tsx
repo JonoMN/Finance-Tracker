@@ -35,8 +35,6 @@ export default function ExpenseCategoriesCard() {
         value: totalsByCategoryId[categoryId]
     }));
 
-    console.log(result);
-
     return (
         <Paper elevation={1} sx={{ p: 3, borderRadius: "20px", height: "250px", ...cardColor }}>
             <Grid container spacing={0} sx={{ p: 2 }} alignItems="center">
